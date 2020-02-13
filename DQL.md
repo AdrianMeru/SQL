@@ -18,6 +18,7 @@
 - [COUNT](#COUNT)
 - [GROUP BY](#GROUP-BY)
 - [HAVING y SUM](#HAVING-y-SUM)
+- [DISTINCT](#DISTINCT)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -173,3 +174,13 @@ ORDER BY continente ASC
 En este codigo te dice el numero de paises que tiene cada continente de manera ascendente
 
 ## HAVING y SUM
+La cláusula **HAVING** se aplica a continuación de las filas del conjunto de resultados. Solo aparecen en el resultado de la consulta los grupos que cumplen las condiciones **HAVING**. Solo puede aplicar una cláusula HAVING a las columnas que también aparecen en la cláusula **GROUP BY** o en una función de agregado y el **SUM** se utliza para sumar tuplas.
+```sql
+SELECT continent
+FROM world
+GROUP BY continent
+HAVING SUM(population)>= 100000000
+```
+Nos muestra los continentes que la suma de se poblacion es mayor o igual a 100000000
+
+## DISTINCT

@@ -15,6 +15,7 @@
 - [LEFT y <>](#LEFT-y-NOT-EQUALS)
 - [Subconsultas](#Subconsultas)
 - [ORDER BY](#ORDER-BY)
+- [COUNT](#COUNT)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -139,3 +140,16 @@ WHERE population >
 En este código seleccionamos los países con más población que Rusia.
 
 ## ORDER BY
+Se utiliza para ordenar el resultado segun un criterio especifico, se utliliza **ASC** para ordenar de manera ascendente y **DESC** para ordenarlo de manera descendente.
+```sql
+SELECT nombre, continente
+FROM world
+WHERE continente IN (
+  SELECT continente
+  FROM world
+  WHERE name IN ('Australia','Argentina'))
+ORDER BY name ASC;
+```
+Este codigo muestra los paises que estan en Americaa del sur y Oceania de manera ascendete.
+
+## COUNT

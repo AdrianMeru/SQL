@@ -6,8 +6,9 @@
 - [SELECT](#SELECT)
 - [FROM](#FROM)  
 - [WHERE](#WHERE)
+- [BETWEEN](#BETWEEN)
 ## Que es sql  
-SQL es un lenguaje de programación que a día d hoy esta debidido en 6 sublenguajes pero nos centraremos unicamente en DQL.  
+SQL es un lenguaje de programación que a día de hoy esta debidido en 6 sublenguajes pero nos centraremos unicamente en DQL.  
 Este lenguaje es de dominio específico, se utliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
   
   ## Conceptos básicos  
@@ -47,7 +48,10 @@ Con este codigo filtramos para que solo nos muestre la población de alemania.
 ## IN  
 Sirve para seleccionar al mismo tiempo varios elementos en un mismo filtro.
 ```sql
-SELECT name, population 
+SELECT nombre, poblacion 
 FROM world
-WHERE name IN ('Sweden','Norway', 'Denmark');
+WHERE name IN ('España','Andorra', 'Portugal');
 ```
+Con esto filtramos al mismo tiempo el  nombre y la población de España, Andorra y Portugal.  
+  
+## BETWEEN

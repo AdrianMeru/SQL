@@ -16,6 +16,7 @@
 - [Subconsultas](#Subconsultas)
 - [ORDER BY](#ORDER-BY)
 - [COUNT](#COUNT)
+- [GROUP BY](#GROUP-BY)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -153,3 +154,11 @@ ORDER BY name ASC;
 Este codigo muestra los paises que estan en Americaa del sur y Oceania de manera ascendete.
 
 ## COUNT
+Sirve para contar el numero de tuplas.
+```sql
+SELECT COUNT(nombre)
+FROM world;
+```
+Con esto sacamos el numero de tuplas que tiene nombre
+
+## GROUP BY

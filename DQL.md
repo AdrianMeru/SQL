@@ -10,6 +10,7 @@
 - [< > y =](#menor-que-mayor-que-igual)
 - [LIKE,%,_](#LIKE-porcentaje-y-guion-bajo)
 - [OR NOT](#OR-y-NOT)
+- [ROUND](#ROUND)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -85,3 +86,14 @@ SELECT name FROM world
 En el codigo anterior filtramos los paises que contengan United.  
   
 ## OR y NOT
+El **OR** se utiliza para decir que se tiene que cumplir una condicion u otra y el **NOT** se utila con el **OR** o el **AND** para indicar negacion en la condicion.
+```sql
+SELECT nombre, poblacion, area
+FROM world
+WHERE
+(population>250000000 OR area>3000000)
+AND NOT(population>250000000 AND area>3000000)
+```
+Este nos filtra los paises que tengan una población mayor que 50000000 o un area mayor que 3000000 y no tengan una población mayor que 50000000 y un area mayor que 3000000.  
+  
+## ROUND

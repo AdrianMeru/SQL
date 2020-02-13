@@ -8,6 +8,8 @@
 - [WHERE](#WHERE)
 - [BETWEEN y AND](#BETWEEN-y-AND)
 - [<,>,=](#<,>,=)
+- [LIKE,%,_](#LIKE,%,_)
+- [OR,NOT](#OR,NOT)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -57,7 +59,7 @@ WHERE name IN ('España','Andorra', 'Portugal');
 Con esto filtramos al mismo tiempo el  nombre y la población de España, Andorra y Portugal.  
   
 ## BETWEEN y AND
-El BETWEEN lo utilizamos para filtrar entre dos números incluyendo los extremos, y el AND para que se tengan que cumplir dos condiciones para que funcione el filtrado.
+El **BETWEEN** lo utilizamos para filtrar entre dos números incluyendo los extremos, y el **AND** para que se tengan que cumplir dos condiciones para que funcione el filtrado.
 ```sql
 SELECT nombre, area
 FROM world
@@ -70,6 +72,16 @@ Se utilizan para hacer comparaciones entre datos de las tablas
 ```sql
 SELECT nombre 
 FROM world
-WHERE population > 200000000
+WHERE population > 200000000;
 ```
 Aqui estamos filtrando para que solo aparezcan los paises con más de 200000000 habitantes, si utilizaramos el < aparecieran los que tuvieran menos y si usaramos el = solo los que tengan el mismo número de inventarios.
+
+## LIKE,%,_
+El **LIKE** se utiliza para filtrar los datos que tengan una estructura parecida, el **%** para decir que hay x caracteres y el _ para decir que hay un caracter.
+```sql
+SELECT name FROM world
+  WHERE name LIKE '%United%';
+```
+En el codigo anterior filtramos los paises que contengan United.  
+  
+## OR,NOT

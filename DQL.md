@@ -23,6 +23,7 @@
 - [NULL](#NULL)
 - [RIGHT JOIN LEFT JOIN](#RIGHT-JOIN-LEFT-JOIN)
 - [COALESCE](#COALESCE)
+- [Agradecimientos](#Agradecimientos)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -203,7 +204,7 @@ SELECT jugador,equipoid,estadio,fechap
   FROM partido JOIN gol ON (id=matchid)
  WHERE equipoid='ALE';
 ```
-Este codigo nos muestra nos muestra los jugadores, el nombre del equipo, el estadio y la fecha del partido de los jugadores de alemania que marcaron gol.
+Este código nos muestra nos muestra los jugadores, el nombre del equipo, el estadio y la fecha del partido de los jugadores de alemania que marcaron gol.
 
 ## NULL
 Son las tuplas que no tienen un resultado.
@@ -215,7 +216,7 @@ WHERE dept IS NULL;
 Con esta consulta nos muestra  los profesores que no tienen departamento.
 
 ## RIGHT JOIN LEFT JOIN
-Se utiliza para seleccionar una tabla del JOIN y la seleccionada mostrara todos sus resultados aunque en la otra sean nulos.
+Se utiliza para seleccionar una tabla del JOIN y la seleccionada mostrará todos sus resultados aunque en la otra sean nulos.
 ```sql
 SELECT profesor.nombre, dept.nombre
 FROM dept RIGHT JOIN profesor ON (profesor.dept=dept.id)
@@ -223,3 +224,12 @@ FROM dept RIGHT JOIN profesor ON (profesor.dept=dept.id)
 En la consulta anterior se muestran todos los profesores aunque su departamento sea nulo.
 
 ## COALESCE
+Se utiliza para sustituir un nulo por un texto.
+```sql
+SELECT nombre, COALESCE(movil,'07986 444 2266') AS movil
+FROM profesor
+```
+Esta consulta nos muestra el móvil de los profesores y en caso de que no tenga pone el número 07986 444 2266.
+
+## Agradecimientos
+Alejandro Becerra Suarez

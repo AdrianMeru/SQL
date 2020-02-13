@@ -9,7 +9,7 @@
 - [BETWEEN y AND](#BETWEEN-y-AND)
 - [< > y =](#<->-y-=)
 - [LIKE,%,_](#LIKE,%,_)
-- [OR NOT](#OR-NOT)
+- [OR NOT](#OR-y-NOT)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  

@@ -17,6 +17,7 @@
 - [ORDER BY](#ORDER-BY)
 - [COUNT](#COUNT)
 - [GROUP BY](#GROUP-BY)
+- [HAVING y SUM](#HAVING-y-SUM)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -162,3 +163,13 @@ FROM world;
 Con esto sacamos el numero de tuplas que tiene nombre
 
 ## GROUP BY
+Se utiliza para agrupar los atributos.
+```sql
+SELECT continente, COUNT(nombre)
+FROM world
+GROUP BY(continente) 
+ORDER BY continente ASC
+```
+En este codigo te dice el numero de paises que tiene cada continente de manera ascendente
+
+## HAVING y SUM

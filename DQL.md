@@ -23,17 +23,31 @@ Este lenguaje es de dominio específico, se utliza para administrar y recuperar 
 Lo utilizamos para seleccionar los datos de las tablas que queremos mostrar.  
 ```sql
 SELECT nombre, continente, poblacion
-FROM world
+FROM world;
 ```
 En este codigo estamos diciendo que nos muestre el nombre, el continent y la población.  
   
 ## FROM
 Se utiliza para seleccionar la tabla en la que estan los datos que quieres mostrar.
 ```sql
-SELECT character
-FROM narauto
+SELECT personaje
+FROM narauto;
 ```
 Con este condigo estamos diciendo que seleccione la tabla narauto.  
 
 ## WHERE
 Sirve para filtrar los datos seleccionados en el **SELECT**.  
+```sql
+SELECT población
+FROM world
+WHERE name = 'Alemania';
+```
+Con este codigo filtramos para que solo nos muestre la población de alemania.  
+  
+## IN  
+Sirve para seleccionar al mismo tiempo varios elementos en un mismo filtro.
+```sql
+SELECT name, population 
+FROM world
+WHERE name IN ('Sweden','Norway', 'Denmark');
+```

@@ -36,3 +36,4 @@ FROM narauto
 Con este condigo estamos diciendo que seleccione la tabla narauto.  
 
 ## WHERE
+Sirve para filtrar los datos seleccionados en el **SELECT**.  

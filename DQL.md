@@ -14,6 +14,7 @@
 - [LENGTH](#LENGTH)
 - [LEFT y <>](#LEFT-y-NOT-EQUALS)
 - [Subconsultas](#Subconsultas)
+- [ORDER BY](#ORDER-BY)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -117,13 +118,24 @@ WHERE LENGTH(name) = LENGTH(capital);
 En el código anterior filtramos los países que tengan el mismo número de caracteres en su nombre que en su capital.
 
 ## LEFT y NOT EQUALS
-El **LEFT** lo utilizamos para comparar por la derecha caracteres y se especifica el numero de caracteres con una , y poniendo el numero de caracteres que vamos a comparar y **<>** se usa para decir que es distinto.
+El **LEFT** lo utilizamos para comparar por la derecha caracteres y se especifica el número de caracteres con una , y poniendo el número de caracteres que vamos a comparar y **<>** se usa para decir que es distinto.
 ```sql
 SELECT nombre,capital
 FROM world
 WHERE LEFT(name,1)=LEFT(capital,1)
 AND name<>capital;
 ```
-Con este codigo filtramos los paises que tengan la misma primera letra que su capital y no sea el mismo nombre.
+Con este código filtramos los países que tengan la misma primera letra que su capital y no sea el mismo nombre.
 
 ## Subconsultas
+Tal y como indica su nombre son consultas dentro de consultas.
+```sql
+SELECT nombre 
+FROM world
+WHERE population >
+     (SELECT poblacion FROM world
+      WHERE nombre='Rusia');
+```
+En este código seleccionamos los países con más población que Rusia.
+
+## ORDER BY

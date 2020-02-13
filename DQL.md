@@ -11,6 +11,7 @@
 - [LIKE,%,_](#LIKE-porcentaje-y-guion-bajo)
 - [OR NOT](#OR-y-NOT)
 - [ROUND](#ROUND)
+- [LENGTH](#LENGTH)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -92,8 +93,16 @@ SELECT nombre, poblacion, area
 FROM world
 WHERE
 (population>250000000 OR area>3000000)
-AND NOT(population>250000000 AND area>3000000)
+AND NOT(population>250000000 AND area>3000000);
 ```
 Este nos filtra los paises que tengan una población mayor que 50000000 o un area mayor que 3000000 y no tengan una población mayor que 50000000 y un area mayor que 3000000.  
   
 ## ROUND
+Sirve para redondear cifras se puede redondear a decimales utilizando una coma e indicando el numero de estos.
+```sql
+SELECT name, ROUND(population/1000000,2)
+FROM world;
+```
+Con este codigo redondemos la poblacion entre 1000000 y la aproximamos a 2 decimales.
+
+## LENGTH

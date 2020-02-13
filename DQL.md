@@ -19,6 +19,7 @@
 - [GROUP BY](#GROUP-BY)
 - [HAVING y SUM](#HAVING-y-SUM)
 - [DISTINCT](#DISTINCT)
+- [JOIN](#JOIN)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -156,12 +157,12 @@ ORDER BY name ASC;
 Este codigo muestra los paises que estan en Americaa del sur y Oceania de manera ascendete.
 
 ## COUNT
-Sirve para contar el numero de tuplas.
+Sirve para contar el número de tuplas.
 ```sql
 SELECT COUNT(nombre)
 FROM world;
 ```
-Con esto sacamos el numero de tuplas que tiene nombre
+Con esto sacamos el número de tuplas que tiene nombre
 
 ## GROUP BY
 Se utiliza para agrupar los atributos.
@@ -174,13 +175,22 @@ ORDER BY continente ASC
 En este codigo te dice el numero de paises que tiene cada continente de manera ascendente
 
 ## HAVING y SUM
-La cláusula **HAVING** se aplica a continuación de las filas del conjunto de resultados. Solo aparecen en el resultado de la consulta los grupos que cumplen las condiciones **HAVING**. Solo puede aplicar una cláusula HAVING a las columnas que también aparecen en la cláusula **GROUP BY** o en una función de agregado y el **SUM** se utliza para sumar tuplas.
+La cláusula **HAVING** se aplica a continuación de las filas del conjunto de resultados. Solo aparecen en el resultado de la consulta los grupos que cumplen las condiciones **HAVING**. Solo puede aplicar una cláusula HAVING a las columnas que también aparecen en la cláusula **GROUP BY** o en una función de agregado y el **SUM** se utiliza para sumar tuplas.
 ```sql
 SELECT continent
 FROM world
 GROUP BY continent
 HAVING SUM(population)>= 100000000
 ```
-Nos muestra los continentes que la suma de se poblacion es mayor o igual a 100000000
+Nos muestra los continentes que la suma de su población es mayor o igual a 100000000
 
 ## DISTINCT
+Se utiliza para que no se repitan los resultados.
+```sql
+SELECT DISTINCT(matchid), player 
+FROM goal
+WHERE teamid LIKE 'GER'
+```
+Nos dice los jugadores de alemania que marcaron gol.
+
+## JOIN

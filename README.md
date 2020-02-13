@@ -18,5 +18,9 @@ Este lenguaje es de dominio específico, se utliza para administrar y recuperar 
   7. Utlizamos **<>** para decir que es diferente
     
 ## Select
-Lo utilizamos
+Lo utilizamos para seleccionar los datos de las tablas que queremos mostrar.  
+'''sql
+SELECT name, continent, population
+FROM world
+'''
   

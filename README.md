@@ -3,7 +3,8 @@
 # ÍNDICE
 - [Que es SQL](#Que-es-sql) 
 - [Conceptos básicos](#Conceptos-básicos)  
-- [Select](#Select)
+- [SELECT](#SELECT)
+- [FROM](#FROM)
 ## Que es sql  
 SQL es un lenguaje de programación que a día d hoy esta debidido en 6 sublenguajes pero nos centraremos unicamente en DQL.  
 Este lenguaje es de dominio específico, se utliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -17,10 +18,12 @@ Este lenguaje es de dominio específico, se utliza para administrar y recuperar 
   6. Los comentarios pueden ser en la misma linea utilizando -- o en diversas lineas utilizando /* */.
   7. Utlizamos **<>** para decir que es diferente
     
-## Select
+## SELECT
 Lo utilizamos para seleccionar los datos de las tablas que queremos mostrar.  
 ```sql
 SELECT name, continent, population
 FROM world
 ```
+En este codigo estamos diciendo que nos muestre el name, continent y population de la tabla world.  
   
+## FROM

@@ -20,6 +20,8 @@
 - [HAVING y SUM](#HAVING-y-SUM)
 - [DISTINCT](#DISTINCT)
 - [JOIN](#JOIN)
+- [NULL](#NULL)
+- [RIGHT JOIN LEFT JOIN](#RIGHT-JOIN-LEFT-JOIN)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -170,7 +172,7 @@ Se utiliza para agrupar los atributos.
 SELECT continente, COUNT(nombre)
 FROM world
 GROUP BY(continente) 
-ORDER BY continente ASC
+ORDER BY continente ASC;
 ```
 En este codigo te dice el numero de paises que tiene cada continente de manera ascendente
 
@@ -180,7 +182,7 @@ La cláusula **HAVING** se aplica a continuación de las filas del conjunto de r
 SELECT continent
 FROM world
 GROUP BY continent
-HAVING SUM(population)>= 100000000
+HAVING SUM(population)>= 100000000;
 ```
 Nos muestra los continentes que la suma de su población es mayor o igual a 100000000
 
@@ -189,8 +191,26 @@ Se utiliza para que no se repitan los resultados.
 ```sql
 SELECT DISTINCT(matchid), player 
 FROM goal
-WHERE teamid LIKE 'GER'
+WHERE teamid LIKE 'GER';
 ```
 Nos dice los jugadores de alemania que marcaron gol.
 
 ## JOIN
+Se utiliza  para unir dos tablas.
+```sql
+SELECT jugador,equipoid,estadio,fechap
+  FROM partido JOIN gol ON (id=matchid)
+ WHERE equipoid='ALE';
+```
+Este codigo nos muestra nos muestra los jugadores, el nombre del equipo, el estadio y la fecha del partido de los jugadores de alemania que marcaron gol.
+
+## NULL
+Son las tuplas que no tienen un resultado.
+```sql
+SELECT name
+FROM teacher
+WHERE dept IS NULL;
+```
+Con esta consulta nos muestra  los profesores que no tienen departamento.
+
+## RIGHT JOIN LEFT JOIN

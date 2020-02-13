@@ -7,7 +7,7 @@
 - [FROM](#FROM)  
 - [WHERE](#WHERE)
 - [BETWEEN y AND](#BETWEEN-y-AND)
-- [<,>,=](#<,>,=)
+- [<,>,=](#<-,->-,-=)
 - [LIKE,%,_](#LIKE,%,_)
 - [OR,NOT](#OR,NOT)
 ## Qué es sql  

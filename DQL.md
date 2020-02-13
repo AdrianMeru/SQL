@@ -8,7 +8,7 @@
 - [WHERE](#WHERE)
 - [BETWEEN y AND](#BETWEEN-y-AND)
 - [< > y =](#<->-y-=)
-- [LIKE,%,_](#LIKE,%,_)
+- [LIKE,%,_](#LIKE-porcentaje-y-guion-bajo)
 - [OR NOT](#OR-y-NOT)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
@@ -76,7 +76,7 @@ WHERE population > 200000000;
 ```
 Aqui estamos filtrando para que solo aparezcan los paises con más de 200000000 habitantes, si utilizaramos el < aparecieran los que tuvieran menos y si usaramos el = solo los que tengan el mismo número de inventarios.
 
-## LIKE % y _
+## LIKE porcentaje y guion bajo
 El **LIKE** se utiliza para filtrar los datos que tengan una estructura parecida, el **%** para decir que hay x caracteres y el _ para decir que hay un caracter.
 ```sql
 SELECT name FROM world

@@ -7,7 +7,7 @@
 - [FROM](#FROM)  
 - [WHERE](#WHERE)
 - [BETWEEN y AND](#BETWEEN-y-AND)
-- [< > y =](#<->-y-=)
+- [< > y =](#menor-que-mayor-que-igual)
 - [LIKE,%,_](#LIKE-porcentaje-y-guion-bajo)
 - [OR NOT](#OR-y-NOT)
 ## Qué es sql  
@@ -67,7 +67,7 @@ WHERE area BETWEEN 200000 AND 250000;
 ```
 En este código filtramos los paises que estan entre 200000 y 250000.  
   
-## < > y =
+## menor que mayor que igual
 Se utilizan para hacer comparaciones entre datos de las tablas
 ```sql
 SELECT nombre 

@@ -22,6 +22,7 @@
 - [JOIN](#JOIN)
 - [NULL](#NULL)
 - [RIGHT JOIN LEFT JOIN](#RIGHT-JOIN-LEFT-JOIN)
+- [COALESCE](#COALESCE)
 ## Qué es sql  
 SQL es un lenguaje de programación que a día de hoy está dividido en 6 sublenguajes pero nos centraremos únicamente en DQL.  
 Este lenguaje es de dominio específico, se utiliza para administrar y recuperar información de sistemas de gestión de bases de datos relacionales.  
@@ -207,10 +208,18 @@ Este codigo nos muestra nos muestra los jugadores, el nombre del equipo, el esta
 ## NULL
 Son las tuplas que no tienen un resultado.
 ```sql
-SELECT name
-FROM teacher
+SELECT nombre
+FROM profesor
 WHERE dept IS NULL;
 ```
 Con esta consulta nos muestra  los profesores que no tienen departamento.
 
 ## RIGHT JOIN LEFT JOIN
+Se utiliza para seleccionar una tabla del JOIN y la seleccionada mostrara todos sus resultados aunque en la otra sean nulos.
+```sql
+SELECT profesor.nombre, dept.nombre
+FROM dept RIGHT JOIN profesor ON (profesor.dept=dept.id)
+```
+En la consulta anterior se muestran todos los profesores aunque su departamento sea nulo.
+
+## COALESCE

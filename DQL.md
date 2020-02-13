@@ -7,7 +7,7 @@
 - [FROM](#FROM)  
 - [WHERE](#WHERE)
 - [BETWEEN y AND](#BETWEEN-y-AND)
-- [<,>,=](#<-,->-,-=)
+- [< > y =](#<->-y-=)
 - [LIKE,%,_](#LIKE,%,_)
 - [OR,NOT](#OR,NOT)
 ## Qué es sql  
@@ -67,7 +67,7 @@ WHERE area BETWEEN 200000 AND 250000;
 ```
 En este código filtramos los paises que estan entre 200000 y 250000.  
   
-## <,>,=
+## < > y =
 Se utilizan para hacer comparaciones entre datos de las tablas
 ```sql
 SELECT nombre 
@@ -76,7 +76,7 @@ WHERE population > 200000000;
 ```
 Aqui estamos filtrando para que solo aparezcan los paises con más de 200000000 habitantes, si utilizaramos el < aparecieran los que tuvieran menos y si usaramos el = solo los que tengan el mismo número de inventarios.
 
-## LIKE,%,_
+## LIKE % y _
 El **LIKE** se utiliza para filtrar los datos que tengan una estructura parecida, el **%** para decir que hay x caracteres y el _ para decir que hay un caracter.
 ```sql
 SELECT name FROM world
@@ -84,4 +84,4 @@ SELECT name FROM world
 ```
 En el codigo anterior filtramos los paises que contengan United.  
   
-## OR,NOT
+## OR y NOT

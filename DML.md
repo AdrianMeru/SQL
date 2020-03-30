@@ -40,3 +40,10 @@ WHERE pais = 'Italia';
 
 ## DELETE
 
+Esta sentencia se utiliza para eliminar tuplas, en este como en el anterior hay que usar el **WHERE** si no elimiariamos toda la tabla.
+
+
+```sql
+DELETE FROM mundo
+WHERE capital = 'Roma';
+```

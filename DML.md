@@ -16,13 +16,14 @@ Bases de Datos del Sistema Gestor de Bases de Datos.Las tres sentencias más imp
 
 ## INSERT
 
-Esta sentencia se utiliza para añadir datos a una tabla, estos datos pueden ser nuevos o provenientes de otra tabla. Para añadir varias tuplas solo se tiene que separar cadan valor por una coma. Si se quiere declarar un valor nulo solo se tiene que dejar en blanco una parte del valor.Para crear una tabla con las tuplas por defecto lo unico que tienes que hacer es poner INSERT INTO <paises> DEFAULT VALUES.
+Esta sentencia se utiliza para añadir datos a una tabla, estos datos pueden ser nuevos o provenientes de otra tabla utilizando el select, para añadir varias tuplas solo se tiene que separar cadan valor por una coma. Si se quiere declarar un valor nulo solo se tiene que dejar en blanco una parte del valor, para crear una tabla con las tuplas por defecto lo unico que tienes que hacer es poner INSERT INTO <paises> DEFAULT VALUES.
   
 ```sql
 INSERT INTO mundo
 (pais, capital)
 VALUE
 ('España', 'Madrid'),
-('Alemania', 'Berlin')
+('Alemania', 'Berlin'),
+(Italia, '')<--valor nulo-->
 ...
 ```

@@ -27,3 +27,16 @@ VALUE
 (Italia, '')<--valor nulo-->
 ...
 ```
+
+## UPDATE
+
+Esta sentencia se utiliza para modicar los datos de una tabla, se utilizan los predicados **SET** y **WHERE**, el primero establece el nuevo valor y el segundo especifica la tupla a modificar **(si no se utiliza el cambio se aplicara a toda la tabla)**
+
+```sql
+UPDATE mundo
+SET capital = 'Roma'
+WHERE pais = 'Italia';
+```
+
+## DELETE
+

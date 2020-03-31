@@ -7,6 +7,8 @@
   -  [CREATE DOMAIN](#CREATE-DOMAIN)
    -  [CREATE TABLE](#CREATE-TABLE)
  - [CONSTRAINT](#CONSTRAINT)
+  -  [PRIMAR KEY](#PRIMARY-KEY)
+  -  [FOREIGN KEY](#FOREIGN-KEY)
 
 ## Que es DDL
 
@@ -39,8 +41,22 @@ Las tablas se crean de manera individual, fuera ponemos el nombre de la tabla y 
 
 ```sql
 CREATE TABLE nombre tabla(
-nombreatributo tipodato [CONSTRAINT]
+nombreatributo tipodato [CONSTRAINT
 );
 ```
 
 ## CONSTRAINT
+
+Las **CONSTRAINT** se utilizan en el create table y con el alter el cual veremos mas adelante. Se utilizan para especificar las primary key, las foreing key, unique, not null y check.
+
+### PRIMARY KEY
+
+Sirve para especificar cual es la clave pricipal de una tabla, la  cual segun las reglas de entidad relacion no pueden ser nulas y sus valores no pueden repetirse.
+
+```sql
+CREATE TABLE nombre tabla(
+nombreatributo tipodato PRIMARY KEY
+);
+```
+
+### FOREIGN KEY

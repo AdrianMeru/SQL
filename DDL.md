@@ -6,7 +6,7 @@
   -  [CREATE SCHEMA](#CREATE-SCHEMA)
   -  [CREATE DOMAIN](#CREATE-DOMAIN)
    -  [CREATE TABLE](#CREATE-TABLE)
-
+ - [CONSTRAINT](#CONSTRAINT)
 
 ## Que es DDL
 
@@ -42,3 +42,5 @@ CREATE TABLE nombre tabla(
 nombreatributo tipodato [CONSTRAINT]
 );
 ```
+
+## CONSTRAINT

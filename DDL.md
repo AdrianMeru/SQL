@@ -9,6 +9,7 @@
  - [CONSTRAINT](#CONSTRAINT)
    -  [PRIMARy KEY](#PRIMARY-KEY)
    -  [FOREIGN KEY](#FOREIGN-KEY)
+   -  [CHECK](#CHECK)
 
 ## Que es DDL
 
@@ -55,21 +56,58 @@ Sirve para especificar cual es la clave pricipal de una tabla, la  cual segun la
 
 **Dentro**
 ```sql
-CREATE TABLE nombre tabla(
-nombreatributo tipodato PRIMARY KEY
+CREATE TABLE nombretabla(
+nombreatributo tipodato PRIMARY KEY,
 );
 ```
 
 **Fuera**
 ```sql
-CREATE TABLE nombre tabla(
-nombreatributo tipodato
-nombreatributo2 tipodato2
+CREATE TABLE nombretabla(
+nombreatributo tipodato,
+nombreatributo2 tipodato2,
 ...
-PRIMARY KEY (<nombreatributo1>[, <nombreatributo2>, ...]
+PRIMARY KEY (<nombreatributo1>[, <nombreatributo2>, ...])
 );
 ```
 
 ### FOREIGN KEY
 
-Se utiliza cuando un atributo de una tabla es la clave principal de otra.
+Se utiliza cuando un atributo de una tabla es la clave principal de otra. Las claves ajenas deben tener el mismo tipo de atributo o dominio que tiene en la tabla en la que es principal. Se puede hacer de dos maneras para claves compuestas y no compuestas.
+
+**No compuestas**
+```sql
+CREATE TABLE nombretabla1(
+1nombreatributo1 dominio1 PRIMARY KEY,
+1nombreatributo2 dominio2,
+);
+CREATE TABLE nombretabla2(
+2nombreatributo1 dominio1 PRIMARY KEY,
+2nombreatributo2 dominio2 REFERENCES nombretabla1 (1nombreatributo1),
+);
+```
+**Compuesta**
+```sql
+CREATE TABLE nombretabla1(
+1nombreatributo1 dominio1,
+1nombreatributo2 dominio2,
+[CONSTRAINT <PK_nombretabla1>]
+  PRIMARY KEY (1nombreatributo1[, 1nombreatributo2])
+);
+CREATE TABLE nombretabla2(
+2nombreatributo1 dominio1 PRIMARY KEY,
+2nombreatributo2 dominio2 REFERENCES nombretabla1 (1nombreatributo1),
+[CONSTRAINT <PK_nombretabla2>]
+  FOREIGN KEY (2nombreatributo1[, 2nombreatributo2]
+  REFERENCES 1nombretabla (1nombreatributo1[, 1nombreatributo2])
+  ON DELETE [CASCADE | NO ACTION | SET NULL | SET DEFAULT <valordefecto>]
+  ON UPDATE [CASCADE | NO ACTION | SET NULL | SET DEFAULT <valordefecto>]
+);
+```
+El **ON DELETE Y EL ON UPDATE** son el criterio que se usa para el borrado o la actualizacion de datos presentes en varias tablas.
+El **NO ACTION** se utiza para no modificar los datos durate el proceso(opcion predefinida).
+El **CASCADE** se realiza en forma de cascada en todas las tablas donde aparezca el dato.
+El **SET NULL** se utiliza para eliminar datos nulos.
+El **SET DEFAULT** añade datos y no se recomienda usarla porque puede comprometer  la integridad de la tabla.
+
+### CHECK

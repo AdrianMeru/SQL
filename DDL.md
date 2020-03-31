@@ -51,12 +51,25 @@ Las **CONSTRAINT** se utilizan en el create table y con el alter el cual veremos
 
 ### PRIMARY KEY
 
-Sirve para especificar cual es la clave pricipal de una tabla, la  cual segun las reglas de entidad relacion no pueden ser nulas y sus valores no pueden repetirse.
+Sirve para especificar cual es la clave pricipal de una tabla, la  cual segun las reglas de entidad relacion no pueden ser nulas y sus valores no pueden repetirse. Se puede hacer en la linea del atributo o fuera.
 
+**Dentro**
 ```sql
 CREATE TABLE nombre tabla(
 nombreatributo tipodato PRIMARY KEY
 );
 ```
 
+**Fuera**
+```sql
+CREATE TABLE nombre tabla(
+nombreatributo tipodato
+nombreatributo2 tipodato2
+...
+PRIMARY KEY (<nombreatributo1>[, <nombreatributo2>, ...]
+);
+```
+
 ### FOREIGN KEY
+
+Se utiliza cuando un atributo de una tabla es la clave principal de otra.

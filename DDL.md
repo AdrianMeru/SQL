@@ -7,9 +7,10 @@
   -  [CREATE DOMAIN](#CREATE-DOMAIN)
    -  [CREATE TABLE](#CREATE-TABLE)
  - [CONSTRAINT](#CONSTRAINT)
-   -  [PRIMARy KEY](#PRIMARY-KEY)
+   -  [PRIMARY KEY](#PRIMARY-KEY)
    -  [FOREIGN KEY](#FOREIGN-KEY)
    -  [CHECK](#CHECK)
+   -  [NOT NULL](#NOT-NULL)
 
 ## Que es DDL
 
@@ -111,3 +112,24 @@ El **SET NULL** se utiliza para eliminar datos nulos.
 El **SET DEFAULT** añade datos y no se recomienda usarla porque puede comprometer  la integridad de la tabla.
 
 ### CHECK
+
+Los **CHECK** se utilizan para evitar valores invalidos en ciertos campos. Estos tambien se pueden crear en la linea del atributo o fuera de ella.
+
+**Dentro**
+```sql
+CREATE TABLE nombretabla(
+nombreatributo tipodato CHECK(<nombreatributo> >25)
+nombreatributo2 tipodato2,
+);
+```
+**Fuera**
+```sql
+CREATE TABLE nombretabla(
+nombreatributo tipodato,
+nombreatributo2 tipodato2,
+...
+CHECK (<nombreatributo> < <nombreatributo2>)
+);
+```
+
+### NOT NULL

@@ -118,7 +118,7 @@ Los **CHECK** se utilizan para evitar valores invalidos en ciertos campos. Estos
 **Dentro**
 ```sql
 CREATE TABLE nombretabla(
-nombreatributo tipodato CHECK(<nombreatributo> >25)
+nombreatributo tipodato CHECK(<nombreatributo> > 25)
 nombreatributo2 tipodato2,
 );
 ```

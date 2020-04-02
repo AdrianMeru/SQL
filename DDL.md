@@ -160,3 +160,19 @@ ALTER TABLE [IF EXISTS] <nombretabla>
 
 ## DROP
 
+El DROP TABLE se utiliza para eliminar tabla con todo su contenido y tambien para eliminiar bases de datos enteras.
+
+**BASES DE DATOS**
+```sql
+DROP SCHEMA <nombreSchema>
+	[RESTRICT | CASCADE]
+;
+```
+
+**TABLA**
+**BASES DE DATOS**
+```sql
+DROP TABLE <nombretabla>
+	[RESTRICT | CASCADE]
+;
+```

@@ -12,6 +12,8 @@
    -  [CHECK](#CHECK)
    -  [NOT NULL mais UNIQUE](#NOT-NULL-mais-UNIQUE)
 - [ALTER](#ALTER)
+-[DROP](#DROP)
+
 ## Que es DDL
 
 Un lenguaje de base de datos o lenguaje de definición de datos (Data Definition Language, DDL por sus siglas en inglés) es un 
@@ -145,4 +147,16 @@ nombreatributo2 tipodato2 UNIQUE NOT NULL,
 ```
 
 ## ALTER
+
+Utilizamos ALTER TABLE para modificar columnas y restricciones. Ademas nos permite cambiar el nombre a ciertos elemnetos y para vincular tablas de outra bases de datos.
+
+```sql
+ALTER TABLE [IF EXISTS] <nombretabla>
+	    [RENAME TO <nuevonombretabla>],
+	    [RENAME [COLUMN | CONSTRAINT] <nombreoriginal> TO <nuevonombre>],
+	    [SET SCHEMA <nuevo_Schema>],
+	    [ADD | DROP [COLUMN | CONSTRAINT] <nombre>]
+```
+
+## DROP
 

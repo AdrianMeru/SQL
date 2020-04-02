@@ -18,3 +18,4 @@ Para finalizar solo tenemos que iniciar el programa:
 ```sql
 sudo mysql
 ```
+![funcionando](/cap.PNG)

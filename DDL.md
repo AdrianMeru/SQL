@@ -12,7 +12,7 @@
    -  [CHECK](#CHECK)
    -  [NOT NULL mais UNIQUE](#NOT-NULL-mais-UNIQUE)
 - [ALTER](#ALTER)
--[DROP](#DROP)
+- [DROP](#DROP)
 
 ## Que es DDL
 

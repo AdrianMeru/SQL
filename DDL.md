@@ -10,8 +10,8 @@
    -  [PRIMARY KEY](#PRIMARY-KEY)
    -  [FOREIGN KEY](#FOREIGN-KEY)
    -  [CHECK](#CHECK)
-   -  [NOT NULL](#NOT-NULL)
-
+   -  [NOT NULL mais UNIQUE](#NOT-NULL-mais-UNIQUE)
+- [ALTER](#ALTER)
 ## Que es DDL
 
 Un lenguaje de base de datos o lenguaje de definición de datos (Data Definition Language, DDL por sus siglas en inglés) es un 
@@ -132,4 +132,17 @@ CHECK (<nombreatributo> < <nombreatributo2>)
 );
 ```
 
-### NOT NULL
+### NOT NULL mais UNIQUE
+
+La utilización de estas dos CONSTRAINT sirve para declarar las claves alternativas.
+
+```sql
+CREATE TABLE nombretabla(
+nombreatributo tipodato PRIMARY KEY,
+nombreatributo2 tipodato2 UNIQUE NOT NULL,
+...
+);
+```
+
+## ALTER
+

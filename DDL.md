@@ -170,7 +170,6 @@ DROP SCHEMA <nombreSchema>
 ```
 
 **TABLA**
-**BASES DE DATOS**
 ```sql
 DROP TABLE <nombretabla>
 	[RESTRICT | CASCADE]

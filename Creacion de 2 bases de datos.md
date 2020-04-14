@@ -29,3 +29,15 @@ Y terminamos con las tablas participa y financia
 
 
 ## Naves espaciales
+
+Creamos la base de datos, la seleccionmos y creamos las tablas servicio, dependencia y camara.
+![funcionando](/img/8.PNG)
+
+Creamos la tabla tripulacion.
+![funcionando](/img/9.PNG)
+
+Creamos las tablas planeta y visita
+![funcionando](/img/10.PNG)
+
+Y finalizamos con la creacion de las tablas raza y habita, ademas le añadimos el check a la tabla camara con el ALTER
+![funcionando](/img/11.PNG)
